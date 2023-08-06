@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <header>
+            <a href="index.html">
+                <img class="logo" src="images/images/logo.png" alt="deer">
+            </a>
+            <div class="header">
+                <div class="hi">
+                    <p>Hi,</p>
+                    <a class="log_in" href="login.html">Log in</a>
+                </div>
+                <span class="line"></span>
+                <a class='basket_link' href="login.html">
+                    <span class="basket">0</span>
+                    <img src="images/images/shopping-cart.png" alt="basket">
+                </a>
+                <a class="log_out" href="index.html">Log out</a>
+            </div>
+        </header>
+        <div class="wrapper">
+            <main class="registr">
+                <form action="" class="sign">
+                    <h1>Secure Sign In</h1>
+                    <p class="subtitle">For current customers</p>
+                    <div class="error"></div>
+                    <input class='email_signIn' type="email" placeholder="Email Address" required />
+                    <input class='password_signIn' type="password" placeholder="Password" required />
+                    <button class="sign_in">Sign in</button>
+                </form>
+                <form action="" class="create">
+                    <h1>Quick Registration</h1>
+                    <p class="subtitle">For new customers</p>
+                    <div class="errorCreate"></div>
+                    <input id="createName" type="text" placeholder="Full name" required />
+                    <input id='createEmail' type="email" placeholder="Email Address" required />
+                    <input id='password' type="password" placeholder="Password" required />
+                    <input id='verify_password' type="password" placeholder="Verify Password" required />
+                    <button class="sign_in">Create Account</button>
+                </form>
+            </main>
+        </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>

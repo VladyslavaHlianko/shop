@@ -1,0 +1,357 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	/* border-spacing: 0; */
+}
+
+html{
+    background: #f8f8f8;
+    width: 100%;
+    height: 100%;
+}
+.wrapper{
+    padding: 0 120px;
+}
+header{
+    background: rgb(68, 158, 68);
+    height: 50px;
+    padding: 5px 120px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.logo{
+    width: 35px;
+    height: 40px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.basket_link img{
+    height: 25px;
+}
+.basket_link{    
+    position: relative;
+}
+.basket{
+    position: absolute;
+    color: rgb(68, 158, 68);
+    right: -2.5px;
+    top: -1px;
+    font-size: 12px;
+}
+.basket_link::before{
+    content: '';
+    position: absolute;
+    top: -3px;
+    right: -7px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+
+}
+.hi{
+    display: flex;
+    gap: 5px;
+    color: white;
+}
+.log_out{
+    display: none;    
+    color: white;
+    margin: 0 0 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed white;
+}
+.line{
+    width: 1px;
+    height: 30px;
+    background: white;
+}
+.log_in{
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed white;
+    color: white;
+}
+.bus_cards, .boat_cards, .car_cards, .aircraft_cards, .helicopter_cards, .bike_cards{
+    display: flex;
+    gap: 20px;
+}
+.card_transport > img{
+    width: 80px;
+}
+.product__cart{
+    background: #e60303;
+    padding: 3px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+.product__cart img{
+    height: 20px;
+}
+.card_transport{
+    padding: 20px;
+    background: white;
+    width: 220px;
+    text-align: center;
+    border-radius: 5px;    
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+    box-shadow: 1px 2px 5px rgb(213, 213, 213);
+}
+.card_transport-price{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+h3{
+    font-weight: bold;
+    font-size: 18px;
+}
+.boat, .bus, .car, .bike, .aircraft, .helicopter{
+    margin-bottom: 50px;
+}
+h2{
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.old_price{
+    text-decoration: line-through;
+    color: rgb(155, 155, 155);
+}
+.transport_name{
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+}
+.transport_discont-amount{
+    color:  white;
+    background: rgb(86, 159, 86);
+    padding: 3px 7px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+.transport_discont{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 auto;
+}
+.transport_inform{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+    margin-top: 15px;
+}
+.none{
+    display: none;
+}
+
+.sign_in, .btn_delete{
+    background: rgb(207, 23, 23);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 10px 30px;    
+    font-weight: bold;
+}
+
+
+h1{
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.subtitle{
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.registr{
+    display: flex;
+    justify-content: space-between;    
+    gap: 41px;
+    padding: 20px 0 0;
+}
+.registr form{    
+    flex: 1 50%;
+}
+input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+}
+.sign{
+    position: relative;
+}
+.sign::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -21px;
+    width: 1px;
+    background: #dbd7d7;
+    height: 100%;
+}
+.error, .errorCreate{
+    display: none;
+    background: rgb(249, 211, 211);
+    border: 2px solid rgb(228, 110, 110);
+    border-radius: 5px;
+    color: rgb(177, 91, 91);
+    padding: 15px;
+    margin-bottom: 10px;
+}
+tr:not(:first-child):not(:last-child){
+    border-bottom: 1px solid black;
+}
+th{
+    background: rgb(199, 196, 196);
+    text-align: center;
+    padding: 5px;
+}
+.number{
+    margin: 10px;
+    padding: 5px;
+    width: auto;
+    border: 1px solid grey;
+    width: 200px;
+}
+.title-table{
+    display: inline;
+    text-align: center;
+    font-weight: bold;
+    white-space: nowrap;
+}
+td{
+    text-align: center;
+    padding: 15px;    
+    vertical-align: middle;
+}
+.table_input{
+    margin: 0 15px;
+    cursor: pointer;
+}
+.favorite, .favorite_order{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.items_title{
+    color: rgb(47, 182, 47);
+}
+.order_inform{
+    display: flex;
+    justify-content: space-between;
+}
+.order_btn{
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    background: rgb(207, 23, 23);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 30px;    
+    font-weight: bold;
+}
+.order{
+    width: 100%;
+    margin: 20px 0 0;
+}
+.order-image{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* padding-right: 55px; */
+}
+td .transport_discont-amount{
+    font-size: 16px;
+}
+.order_inform-account, .order_inform{
+    margin: 0 0 30px;
+}
+.info-block{
+    display: flex;
+    justify-content: space-between;
+}
+.order_inform-account div:first-child{    
+    margin: 0 0 10px;
+}
+.btn_delete{
+    background: rgb(249, 211, 211);
+    color: rgb(177, 91, 91);    
+    display: block;
+    margin: 0 auto;
+}
+.product__cart-in{
+    background: green;
+}
+.table_img{
+    width: 100px;
+    height: 100px;
+}
+.items, .items_order{
+    min-width: 800px;
+}
+#table, .table_order{
+    width: 100%;
+}

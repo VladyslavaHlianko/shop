@@ -17,8 +17,8 @@ let getProducts = async () => {
         let old_price = clone.querySelector('.old_price');
         let price = clone.querySelector('.price');
         let tr_discont = clone.querySelector('.transport_discont')
-  
-        img.src = `images/images/products/${el.img}.png`;
+
+        img.src = `images/images/products/${el.img.toLowerCase()}.png`;
         title.innerText = el.title;
   
         if (el.sale) {
@@ -131,7 +131,7 @@ let deleteProduct = async (userId, productId) => {
     basketElement.textContent = count;
   }
     
-let create_User = async (obj) => {
+  let create_User = async (obj) => {
     return await fetch('https://634e9f834af5fdff3a625f84.mockapi.io/users', {
       method: 'POST',
       headers: {
@@ -152,7 +152,7 @@ let create_User = async (obj) => {
   }
   
 
-let updateUserData = async (userId, newData) => {
+  let updateUserData = async (userId, newData) => {
     return await fetch(`https://634e9f834af5fdff3a625f84.mockapi.io/users/${userId}`, {
       method: 'PUT',
       headers: {
@@ -244,7 +244,7 @@ if (formCreate) {
 });
 
 
-let getProductsFromServer = async () => {
+  let getProductsFromServer = async () => {
     let result = await fetch('https://634e9f834af5fdff3a625f84.mockapi.io/products', {
       method: 'GET',
       headers: {
@@ -258,7 +258,7 @@ let getProductsFromServer = async () => {
     return result; 
   };
   
-getUsers().then(users => {
+  getUsers().then(users => {
     let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
     if (loggedInUser && loggedInUser.id) {
       let logged = users.find(user => user.id === loggedInUser.id);
